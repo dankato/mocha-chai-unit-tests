@@ -1,7 +1,7 @@
 {
-  "name": "test-intro",
+  "name": "unit-tests",
   "version": "1.0.0",
-  "description": "",
+  "description": "unit-tests",
   "main": "index.js",
   "scripts": {
     "test": "mocha"
@@ -12,5 +12,16 @@
   "devDependencies": {
     "chai": "^3.5.0",
     "mocha": "^3.1.2"
-  }
+  },
+  "directories": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dankato/mocha-chai-unit-tests.git"
+  },
+  "bugs": {
+    "url": "https://github.com/dankato/mocha-chai-unit-tests/issues"
+  },
+  "homepage": "https://github.com/dankato/mocha-chai-unit-tests#readme"
 }
