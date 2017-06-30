@@ -3,7 +3,11 @@ const should = require('chai').should();
 
 describe('fizzbuzz', function() {
   it('should be a type of number', function() {
-    fizzbuzzFunction('chai').should.be.a('number');
+    //fizzbuzzFunction(number).should.typeOf(number);
+    (function() {
+        fizzBuzzer('string')
+    }).should.throw(Error);
+
   });
   it('if number is % 15 === 0, returns fizzbuzz', function() {
     fizzbuzzFunction(30).should.equal('fizz-buzz');
@@ -18,3 +22,4 @@ describe('fizzbuzz', function() {
     fizzbuzzFunction(7).should.equal(7);
   });
 });
+
