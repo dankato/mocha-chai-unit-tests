@@ -1,28 +1,20 @@
-//fizzBuzzer should
+const fizzbuzzFunction = require('../fizzbuzzer');
+const should = require('chai').should();
 
 describe('fizzbuzz', function() {
-    it('should be a type of number');
-    it('if number is % 15 it should return 0');
-    it('if number is % 5 it should return 0');
-    it('if number is % 3 it should return 0');
-    it('if number returned is greater than 0, it should return number');
-})
-
-
-module.exports = function(num) {
-	if (typeof num !== 'number') {
-		throw Error('`num` must be a number');
-	}
-	if (num % 15 === 0) {
-		return 'fizz-buzz';
-	}
-	if (num % 5 === 0) {
-		return 'buzz';
-	}
-	if (num % 3 === 0) {
-		return 'fizz';
-	}
-	else {
-		return num;
-	}
-}
+  it('should be a type of number', function() {
+    fizzbuzzFunction('chai').should.be.a('number');
+  });
+  it('if number is % 15 === 0, returns fizzbuzz', function() {
+    fizzbuzzFunction(30).should.equal('fizz-buzz');
+  });
+  it('if number is % 5 === 0, returns buzz', function() {
+    fizzbuzzFunction(10).should.equal('buzz');
+  });
+  it('if number is % 3 === 0, returns fizz', function() {
+    fizzbuzzFunction(9).should.equal('fizz');
+  });
+  it('if the number is prime', function() {
+    fizzbuzzFunction(7).should.equal(7);
+  });
+});
